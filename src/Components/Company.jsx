@@ -57,7 +57,7 @@ const Team = [
         member:"Bar. Kunle Smith",
         title: "Legal Matters",
         descriptipn: "Placeholder",
-        picture: "/images/placeholder.jpg",
+        picture: "/images/barr.smith.jpg",
     },
                 {
         member:"Mr. Ogbeyemi Sunday",
