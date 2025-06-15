@@ -69,10 +69,10 @@ const Content = () => {
   return (
     <div className=" p-2 pt-10 bg-gray-600/50">
       <div className="min-h-screen ">
-        <div className="max-[700px]:space-y-4 md:flex gap-10">
+        <div className="max-[700px]:space-y-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, j) => {
             return (
-              <div key={j} className="space-y-4 md:w-400 bg-white shadow-lg p-3 rounded-lg">
+              <div key={j} className="space-y-4 bg-white shadow-lg p-3 rounded-lg">
                 <div className="">
                   <img
                     src={card.image}
@@ -84,8 +84,8 @@ const Content = () => {
                   <p className="font-bold text-2xl text-center">{card.title}</p>
                   <p className="text-justify">{card.info}</p>
                   <div className="pt-2">
-                    {card.bullets.map((i) => {
-                      return <p>{i}</p>;
+                    {card.bullets.map((i,j) => {
+                      return <p key={j}>{i}</p>;
                     })}
                   </div>
                 </div>
@@ -96,7 +96,6 @@ const Content = () => {
             );
           })}
         </div>
-        {/* <img src="/images/kingsmindeducators.png" alt="kings mind educators" /> */}
       </div>
     </div>
   );

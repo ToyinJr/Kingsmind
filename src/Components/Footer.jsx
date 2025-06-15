@@ -15,7 +15,7 @@ const Footer = () => {
             Nobis et recusandae qui doloribus reiciendis quibusdam, <br />
             distinctio sapiente cum dolorum est?
           </p>
-          <div className="space-y-2 text-center place-self-center">
+          <div className="space-y-2 text-center max-[700px]:place-self-center place-self-center">
             <p className="text-white">Follow Us</p>
             <div className="flex gap-2">
               <Link

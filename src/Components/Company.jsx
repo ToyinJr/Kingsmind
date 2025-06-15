@@ -73,8 +73,8 @@ const Company = () => {
   return (
     <div className="min-h-screen">
       <div className="p-4">
-      <div className="space-y-4 p-14 bg-gray-400/10 text-xl">
-          <p className="text-justify">
+      <div className="space-y-4 md:p-14 bg-gray-400/10 md:text-xl">
+          <p className="md:text-justify">
           King's Mind Educators was born out of grace, passion and the urge to
           impact the lives of children, youths and everyone that we have the
           priviledge of meeting. Our CEO, Mr. Joseph Agoro has it all. A
@@ -87,14 +87,14 @@ const Company = () => {
           tutelage. What a privilege.
         </p>
 
-        <p className="text-justify">
+        <p className="md:text-justify">
           Having engaged and still engaging in all these, we can say we have
           learnt from many of the experiences and by the virtue of chance,
           hardwork, perseverance have gotten really better and far ahead of our
           mates in the business of mentoring and shaping lives.
         </p>
 
-        <p className="text-justify">
+        <p className="md:text-justify">
           To our credits, we have produced hundreds of university graduates,
           within and outside the shores of Nigeria. Many married and doing
           really well in life in different quarters. We have many sound chess
