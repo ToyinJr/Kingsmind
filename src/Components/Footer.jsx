@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-500">
-      <div className="flex justify-around p-4">
+      <div className="md:flex justify-around p-4">
         <div>
-          <img src="images/logo.png" alt="logo" />
+          <img src="images/logo.png" className="mx-auto" alt="logo" />
         </div>
 
         <div>
           <p className="text-2xl font-bold text-center text-white">About</p>
-          <p>
+          <p className="text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br />
             Nobis et recusandae qui doloribus reiciendis quibusdam, <br />
             distinctio sapiente cum dolorum est?
           </p>
-          <div className="space-y-2">
+          <div className="space-y-2 text-center place-self-center">
             <p className="text-white">Follow Us</p>
-            <div className="md:flex gap-2">
+            <div className="flex gap-2">
               <Link
                 to={"https://web.facebook.com/Kingsmindchess/"}
                 target="_blank"
