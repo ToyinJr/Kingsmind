@@ -69,7 +69,7 @@ const Content = () => {
   return (
     <div className=" p-2 pt-10 bg-gray-600/50">
       <div className="min-h-screen ">
-        <div className="max-[700px]:space-y-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-4 ">
           {cards.map((card, j) => {
             return (
               <div key={j} className="space-y-4 bg-white shadow-lg p-3 rounded-lg">
@@ -77,15 +77,15 @@ const Content = () => {
                   <img
                     src={card.image}
                     alt={card.alt}
-                    className="h-100 w-150"
+                    className="h-150 w-500 max-[700px]:h-30"
                   />
                 </div>
                 <div className="space-y-3">
                   <p className="font-bold text-2xl text-center">{card.title}</p>
-                  <p className="text-justify">{card.info}</p>
+                  <p className="md:text-justify max-[700px]:text-xs">{card.info}</p>
                   <div className="pt-2">
                     {card.bullets.map((i,j) => {
-                      return <p key={j}>{i}</p>;
+                      return <p key={j} className="max-[700px]:text-xs">{i}</p>;
                     })}
                   </div>
                 </div>
