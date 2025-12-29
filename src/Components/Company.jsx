@@ -1,3 +1,6 @@
+import '../style.css';
+import Contact from './Contact';
+
 const Team = [
     {
         member:"Mr. Joseph Agoro",
@@ -71,7 +74,8 @@ const Team = [
 const Company = () => {
   window.scrollTo(0, 0);
   return (
-    <div className="min-h-screen">
+    <div className="">
+        <Contact />
       <div className="p-4">
       <div className="space-y-4 md:p-14 bg-gray-400/10 md:text-xl">
           <p className="md:text-justify">
