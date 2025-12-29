@@ -30,8 +30,7 @@ We provide guidance and support to students, parents, and schools related to edu
     title: "Chess Services",
     info: `We provide structured training and resources to help individuals, particularly children and young people, improve their chess skills.We offer practical lessons in chess theory, strategy, and tactics, we help players develop critical thinking, logical reasoning, and decision-making skills.
 At Kings Mind Chess Academy, chess is fun, we focus on building cognitive abilities and enhancing concentration.
-We use chess as a tool to make the lives of people better by letting them see the immense benefits that learning and playing the game of chess offers.
-y`,
+We use chess as a tool to make the lives of people better by letting them see the immense benefits that learning and playing the game of chess offers.`,
 
     bullets: [
       "We offer:",
@@ -70,7 +69,7 @@ y`,
 const Content = () => {
     window.scrollTo(0,0);
   return (
-    <div className=" p-2 pt-10 bg-gray-600/50 relative">
+    <div className=" p-2 pt-10 bg-gray-600/50 ">
             <div className="absolute z-99 justify-around p-4 follow bg-blue-100 animate-pulse">
             <div className="gap-2">
               <Link
@@ -131,27 +130,27 @@ const Content = () => {
             </div>
           </div>
 
-      <div className="min-h-screen ">
-        <div className="space-y-4 ">
+      <div className="">
+        <div className="max-md:space-y-4 md:grid grid-cols-3 gap-4">
           {cards.map((card, j) => {
             return (
-              <div key={j} className="space-y-4 bg-white shadow-lg p-3 rounded-lg md:grid grid-cols-2 gap-12">
+              <div key={j} className="space-y-4 bg-white shadow-lg p-3 rounded-lg">
                 <div className="">
                   <img
                     src={card.image}
                     alt={card.alt}
-                    className="h-100 w-500 max-[700px]:h-30"
+                    className="h-100 w-400"
                   />
                 </div>
                 <div className="space-y-3">
-                  <p className="font-bold text-2xl text-center">{card.title}</p>
-                  <p className="md:text-justify max-[700px]:text-xs">{card.info}</p>
+                  <div><p className="font-bold text-4xl text-center">{card.title}</p></div>
+                  <div><p className="md:text-justify max-[700px]:text-xs">{card.info}</p></div>
                   <div className="pt-2">
                     {card.bullets.map((i,j) => {
                       return <p key={j} className="max-[700px]:text-xs">{i}</p>;
                     })}
                   </div>
-                                  <div className="place-self-center">
+                  <div className="place-self-center">
                   <button className={card.buttonStyle}>{card.button}</button>
                 </div>
                 </div>
