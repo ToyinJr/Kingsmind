@@ -47,53 +47,6 @@ const Chess = () => {
   window.scrollTo(0, 0);
 
   return (
-    // <div>
-    //   <div>
-    //     <Link to={"/"}>
-    //       <ChevronLeft className="" />
-    //     </Link>
-
-    //     <div>
-    //          {/* <div className="swiper w-full max-w-lg mx-auto">
-    //         <div className="swiper-wrapper">
-
-    //           {images.map((src, index) => (
-    //             <div className="swiper-slide" key={index}>
-    //               <img src={src} alt={`Loaded ${index}`} className="w-full h-full " />
-    //             </div>
-    //           ))}
-    //         </div>
-    //       </div> */}
-
-    //       <p className="font-bold text-center text-4xl"> KingsMind Chess</p>
-    //       <p className="text-justify">
-    //         We provide structured training and resources to help individuals,
-    //         particularly children and young people, improve their chess
-    //         skills.We offer practical lessons in chess theory, strategy, and
-    //         tactics, we help players develop critical thinking, logical
-    //         reasoning, and decision-making skills. At Kings Mind Chess Academy,
-    //         chess is fun, we focus on building cognitive abilities and enhancing
-    //         concentration. We use chess as a tool to make the lives of people
-    //         better by letting them see the immense benefits that learning and
-    //         playing the game of chess offers.
-    //       </p>
-
-    //       <div>
-    //         <p>We offer: </p>
-    //         <ul className="list-disc mx-6">
-    //           <li>Chess in schools programs.</li>
-    //           <li>Chess clubs</li>
-    //           <li>Private home chess tutoring</li>
-    //           <li>Online chess training</li>
-    //           <li>
-    //             Chess Competitions: scholarstic chess competitions as well as
-    //             chess for recreational activities.
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
 
     <div className="">
       <div>
