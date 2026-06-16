@@ -75,7 +75,7 @@ const Chess = () => {
             play={true}
             speed={150}
             clones={3}
-            className="my-4 p-4 bg-linear-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% text-white text-6xl"
+            className="my-4 p-4 bg-linear-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% text-white text-4xl"
           >
        <div className="flex space-x-30">
              <div>
@@ -99,7 +99,7 @@ const Chess = () => {
             </div>
 
             <div className="hidden">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, necessitatibus?</p>
+              <p>Lorem</p>
             </div>
        </div>
           </Marquee>
