@@ -56,7 +56,7 @@ const Chess = () => {
           </Link>
         </div>
         <div>
-          <div className="swiper w-full h-[80vh] lg:h-[85vh] max-sm:h-[65vh] object-center rounded-lg">
+          <div className="swiper w-full h-[78vh] lg:h-[70vh] max-sm:h-[65vh] object-center rounded-lg">
             <div className="swiper-wrapper">
               {images.map((src, index) => (
                 <div className="swiper-slide" key={index}>
