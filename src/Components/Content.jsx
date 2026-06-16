@@ -80,12 +80,12 @@ const Content = () => {
     <div className=" p-2 pt-10 ">
 
       <div className="text-black min-h-screen">
-        <div className="max-md:space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-md:space-y-4 md:grid max-md:grid-cols-1 lg:grid-cols-3 gap-4">
           {cards.map((card, j) => {
             return (
               <div
                 key={j}
-                className="bg-[#006ca7]/30 shadow-lg p-3 rounded-lg flex flex-col h-full"
+                className="bg-linear-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% shadow-lg p-3 rounded-lg flex flex-col h-full text-white"
               >
                 <img
                   src={card.image}

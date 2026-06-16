@@ -2,6 +2,7 @@ import React from "react";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 import Swiper from "swiper/bundle";
 import "swiper/css";
@@ -47,14 +48,13 @@ const Chess = () => {
   window.scrollTo(0, 0);
 
   return (
-
     <div className="">
       <div>
-       <div className="w-fit">
-         <Link to={"/"}>
-          <ChevronLeft size={"2rem"}/>
-        </Link>
-       </div>
+        <div className="w-fit">
+          <Link to={"/"}>
+            <ChevronLeft size={"2rem"} />
+          </Link>
+        </div>
         <div>
           <div className="swiper w-full h-[80vh] lg:h-[85vh] max-sm:h-[70vh] object-center rounded-lg">
             <div className="swiper-wrapper">
@@ -70,6 +70,39 @@ const Chess = () => {
               ))}
             </div>
           </div>
+
+          <Marquee
+            play={true}
+            speed={150}
+            clones={3}
+            className="my-4 p-4 bg-linear-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% text-white text-6xl"
+          >
+       <div className="flex space-x-30">
+             <div>
+              <i class="fa-solid fa-chess-king"></i>
+            </div>
+            <div>
+              <i class="fa-solid fa-chess-queen"></i>
+            </div>
+            <div>
+              {" "}
+              <i class="fa-solid fa-chess-bishop"></i>
+            </div>
+            <div>
+              <i class="fa-solid fa-chess-knight"></i>
+            </div>
+            <div>
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div>
+              <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+
+            <div className="hidden">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, necessitatibus?</p>
+            </div>
+       </div>
+          </Marquee>
 
           <div className="p-4">
             <p className="font-bold text-center text-4xl mt-4">
@@ -101,15 +134,26 @@ const Chess = () => {
             </div>
 
             <div className="pt-6">
-                <p className="font-bold text-2xl">To register for competitions, fun or training, contact Mr. Joseph Agoro</p>
-                <div className="flex gap-4">
-                    <Link to={'http://wa.me/+2348029726732'} target="_blank" className="hover:scale-105 transition-all duration-500">
-                <i class="fa-brands fa-whatsapp text-6xl"></i>
+              <p className="font-bold text-2xl">
+                To register for competitions, fun or training, contact Mr.
+                Joseph Agoro
+              </p>
+              <div className="flex gap-4">
+                <Link
+                  to={"http://wa.me/+2348029726732"}
+                  target="_blank"
+                  className="hover:scale-105 transition-all duration-500"
+                >
+                  <i class="fa-brands fa-whatsapp text-6xl text-[#006ca7]"></i>
                 </Link>
-                <Link to={'http://wa.me/+2348115087637'} target="_blank" className="hover:scale-105 transition-all duration-500">
-                <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+                <Link
+                  to={"http://wa.me/+2348115087637"}
+                  target="_blank"
+                  className="hover:scale-105 transition-all duration-500"
+                >
+                  <i class="fa-brands fa-square-whatsapp text-6xl text-[#006ca7]"></i>
                 </Link>
-                </div>
+              </div>
             </div>
           </div>
         </div>
