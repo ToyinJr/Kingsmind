@@ -51,7 +51,7 @@ const Company = () => {
           {Team.map((member, j) => {
             return (
               <div
-                className="bg-[#006ca7]/30 shadow-lg rounded-lg p-2 text-black"
+                className="text-white bg-linear-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% shadow-lg rounded-lg p-2 text-black"
                 key={j}
               >
                 <div>

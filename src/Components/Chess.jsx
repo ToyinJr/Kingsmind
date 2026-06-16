@@ -144,14 +144,14 @@ const Chess = () => {
                   target="_blank"
                   className="hover:scale-105 transition-all duration-500"
                 >
-                  <i class="fa-brands fa-whatsapp text-6xl text-[#006ca7]"></i>
+                  <i class="fa-brands fa-whatsapp text-6xl bg-gradient-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% bg-clip-text text-transparent"></i>
                 </Link>
                 <Link
                   to={"http://wa.me/+2348115087637"}
                   target="_blank"
                   className="hover:scale-105 transition-all duration-500"
                 >
-                  <i class="fa-brands fa-square-whatsapp text-6xl text-[#006ca7]"></i>
+                  <i class="fa-brands fa-square-whatsapp text-6xl bg-gradient-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% bg-clip-text text-transparent"></i>
                 </Link>
               </div>
             </div>
