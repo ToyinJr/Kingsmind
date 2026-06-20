@@ -3,6 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Media = () => {
+  window.scrollTo(0, 0);
   return (
     <div className="min-h-screen">
       <div className="w-fit">

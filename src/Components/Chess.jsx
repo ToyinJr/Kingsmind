@@ -48,7 +48,7 @@ const Chess = () => {
   window.scrollTo(0, 0);
 
   return (
-    <div className="">
+    <div className="min-h-screen">
       <div>
         <div className="w-fit">
           <Link to={"/"}>
@@ -56,11 +56,11 @@ const Chess = () => {
           </Link>
         </div>
         <div>
-          <div className="swiper w-full h-[78vh] lg:h-[70vh] max-sm:h-[65vh] object-center rounded-lg">
+          {/* <div className="swiper w-full h-[78vh] lg:h-[70vh] max-sm:h-[65vh] object-center rounded-lg">
             <div className="swiper-wrapper">
               {images.map((src, index) => (
                 <div className="swiper-slide" key={index}>
-                  {/* 2. Forced the image to fill the slide perfectly without stretching */}
+          
                   <img
                     src={src}
                     alt={`Loaded ${index}`}
@@ -69,9 +69,9 @@ const Chess = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
-          <Marquee
+          {/* <Marquee
             play={true}
             speed={150}
             clones={3}
@@ -102,7 +102,7 @@ const Chess = () => {
               <p>Lorem</p>
             </div>
        </div>
-          </Marquee>
+          </Marquee> */}
 
           <div className="p-4">
             <p className="font-bold text-center text-4xl mt-4">

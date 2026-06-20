@@ -1,85 +1,100 @@
 import "../style.css";
 import { Link } from "react-router-dom";
-
-let cards = [
-  {
-    image: "images/kme.png",
-    link: '/education',
-    alt: "kingsmind educators",
-    title: "Educational Services",
-    info: `We provide guidance and support to students, parents, and schools on various aspects of education, including academic planning, college admissions, career development as well as curriculum improvement.
-
-We work with different educational institutions, helping to navigate complex educational structures and career opportunities.
-Our clients enjoy different advice on a variety of educational needs and services. This could mean reviewing new educational tools or working closely with parents to ensure that they know how to support their students as they apply to and plan for college.
-We provide guidance and support to students, parents, and schools related to education and career planning by engaging them in`,
-
-    bullets: [
-      "- Seminars ",
-      "- Online Classes",
-      "- Private teachings.",
-      "- Tutorials to.",
-      "- Adult Literacy",
-    ],
-
-    button: "Find Out More",
-    buttonStyle:
-      "bg-blue-400 p-4 rounded-full text-white cursor-pointer hover:bg-blue-400/90",
-  },
-
-  {
-    image: "images/kmc.png",
-    link: '/chess',
-    alt: "kingsmind Chess",
-    title: "Chess Services",
-    info: `We provide structured training and resources to help individuals, particularly children and young people, improve their chess skills.We offer practical lessons in chess theory, strategy, and tactics, we help players develop critical thinking, logical reasoning, and decision-making skills.
-At Kings Mind Chess Academy, chess is fun, we focus on building cognitive abilities and enhancing concentration.
-We use chess as a tool to make the lives of people better by letting them see the immense benefits that learning and playing the game of chess offers.`,
-
-    bullets: [
-      "We offer:",
-      "- Chess in schools programs.",
-      "- Chess clubs",
-      "-  Private home chess tutoring",
-      "- Online chess training",
-      "-  Chess Competitions: scholarstic chess competitions as well as chess for recreational activities.",
-    ],
-
-    button: "Find Out More",
-    buttonStyle:
-      "bg-orange-400 p-4 rounded-full text-white  cursor-pointer hover:bg-orange-400/90",
-  },
-
-  {
-    image: "images/j5m.png",
-    alt: "J5MEDIA",
-    link: '/media',
-    title: "Media Services",
-    info: `We create and share educational, informative, and entertaining media that highlights learning, personal development, community impact, and the achievements of individuals and organizations. Through digital storytelling, interviews, features, and multimedia content, we provide a platform for knowledge sharing and positive conversations.
-
-At Kings Mind Media, we believe that media is a powerful tool for education, awareness, and transformation. We are committed to producing content that informs, inspires, and empowers people to learn, grow, and make a positive difference in their communities.
-
-Our mission is to use media as a vehicle for promoting education, creativity, innovation, and social development, helping individuals and organizations amplify their voices and reach wider audiences.`,
-
-    bullets: [
-      "We produce, distribute and manage media content, we specialise in creating",
-      "- video content and editing,",
-      "- media production and planning",
-      "- photography ",
-      "- event planning, branding and advertisement",
-    ],
-
-    button: "Find Out More",
-    buttonStyle:
-      "bg-black p-4 rounded-full text-white  cursor-pointer hover:bg-blac/90",
-  },
-];
+import Marquee from "react-fast-marquee";
+import { useState, useEffect } from "react";
+import Swiper from "swiper/bundle";
+import "swiper/css";
+import "swiper/css/bundle";
+import { cards } from "../allData.js";
 
 const Content = () => {
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    const imageModules = import.meta.glob(
+      "/public/images/chess/*.{png,jpg,jpeg,svg}",
+    );
+
+    const loadImages = async () => {
+      const loadedImages = await Promise.all(
+        Object.keys(imageModules).map(async (path) => {
+          const mod = await imageModules[path]();
+          return mod.default; // Returns the parsed URL string
+        }),
+      );
+      setImages(loadedImages);
+    };
+
+    loadImages();
+  }, []);
+
+  useEffect(() => {
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      slidesPerView: 1,
+      autoHeight: false,
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        // pauseOnMouseEnter: true,
+      },
+    });
+
+    return () => swiper.destroy();
+  }, [images]);
   window.scrollTo(0, 0);
   return (
-    <div className=" p-2 pt-10 ">
+    <div className=" p-2 ">
+      <div className="swiper w-full h-[78vh] lg:h-[80vh] max-sm:h-[65vh] object-center rounded-lg">
+        <div className="swiper-wrapper">
+          {images.map((src, index) => (
+            <div className="swiper-slide" key={index}>
+              {/* 2. Forced the image to fill the slide perfectly without stretching */}
+              <img
+                src={src}
+                alt={`Loaded ${index}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
-      <div className="text-black min-h-screen">
+      <Marquee
+        play={true}
+        speed={150}
+        clones={3}
+        className="my-4 p-4 bg-linear-to-b from-[#006ca7] from-50% to-[#2a166f] to-50% text-white text-4xl"
+      >
+        <div className="flex space-x-30">
+          <div>
+            <i class="fa-solid fa-chess-king"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-chess-queen"></i>
+          </div>
+          <div>
+            {" "}
+            <i class="fa-solid fa-chess-bishop"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-chess-knight"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-chess-rook"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-chess-pawn"></i>
+          </div>
+
+          <div className="hidden">
+            <p>Lorem</p>
+          </div>
+        </div>
+      </Marquee>
+
+      <div className="text-black ">
         <div className="max-md:space-y-4 md:grid max-md:grid-cols-1 lg:grid-cols-3 gap-4">
           {cards.map((card, j) => {
             return (
@@ -109,7 +124,12 @@ const Content = () => {
                   </div> */}
 
                   <div className="mt-auto flex justify-center pt-6">
-                  <Link to={card.link}>  <button className={card.buttonStyle}>{card.button}</button></Link>
+                    <Link to={card.link}>
+                      {" "}
+                      <button className={card.buttonStyle}>
+                        {card.button}
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
