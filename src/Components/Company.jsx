@@ -50,7 +50,7 @@ const Company = () => {
         <div className="px-5 sm:px-8 lg:px-16 py-8 max-w-4xl mx-auto w-full">
           <div className="h-1 w-20 rounded-full bg-gradient-to-r from-[#006ca7] to-[#2a166f] mb-6" />
 
-          <div className="space-y-4 text-gray-600 leading-relaxed text-base sm:text-lg">
+          <div className="space-y-4 text-gray-400 leading-relaxed text-base sm:text-lg">
             <p>
               King's Mind Educators was born out of grace, passion and the urge
               to impact the lives of children, youths and everyone that we have
