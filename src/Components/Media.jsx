@@ -1,4 +1,4 @@
-// 
+//
 
 import React, { useEffect } from "react";
 import { ChevronLeft } from "lucide-react";
@@ -35,25 +35,33 @@ const stats = [
 ];
 
 const Media = () => {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
-      <Helmet><title>J5 Media & Events</title></Helmet>
+      <Helmet>
+        <title>J5 Media & Events</title>
+      </Helmet>
 
-      <div className="min-h-screen bg-white">
-
+      <div className="min-h-screen">
         {/* ── Back button ── */}
         <div className="px-4 pt-4">
-          <Link to="/" className="inline-flex items-center gap-1 text-[#006ca7] font-semibold hover:opacity-75 transition-opacity">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1 text-[#006ca7] font-semibold hover:opacity-75 transition-opacity"
+          >
             <ChevronLeft size="1.25rem" />
             <span>Back</span>
           </Link>
         </div>
 
         {/* ── Hero banner ── */}
-        <div className="relative mt-3 w-full overflow-hidden"
-             style={{ minHeight: "clamp(160px, 30svh, 320px)" }}>
+        <div
+          className="relative mt-3 w-full overflow-hidden"
+          style={{ minHeight: "clamp(160px, 30svh, 320px)" }}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-[#006ca7] via-[#1a3e8f] to-[#2a166f]" />
 
           {/* decorative camera lens rings */}
@@ -78,10 +86,14 @@ const Media = () => {
         {/* ── Stat pills ── */}
         <div className="flex flex-wrap gap-3 px-5 sm:px-8 lg:px-16 py-5 max-w-4xl mx-auto">
           {stats.map((s, i) => (
-            <div key={i}
-                 className="flex flex-col items-center px-6 py-3 rounded-2xl
-                            bg-gradient-to-br from-[#eaf4fb] to-[#ece9f9] shadow-sm min-w-[90px]">
-              <span className="font-extrabold text-[#006ca7] text-lg leading-tight">{s.value}</span>
+            <div
+              key={i}
+              className="flex flex-col items-center px-6 py-3 rounded-2xl
+                            bg-gradient-to-br from-[#eaf4fb] to-[#ece9f9] shadow-sm min-w-[90px]"
+            >
+              <span className="font-extrabold text-[#006ca7] text-lg leading-tight">
+                {s.value}
+              </span>
               <span className="text-gray-500 text-xs mt-0.5">{s.label}</span>
             </div>
           ))}
@@ -90,14 +102,14 @@ const Media = () => {
         {/* ── About text ── */}
         <div className="px-5 sm:px-8 lg:px-16 pb-8 max-w-4xl mx-auto">
           <div className="h-1 w-20 rounded-full bg-gradient-to-r from-[#006ca7] to-[#2a166f] mb-5" />
-          <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+          <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
             We create and share educational, informative, and entertaining media
-            that highlights learning, personal development, community impact, and
-            individual achievements. Through digital storytelling, interviews,
-            features, and multimedia content, we provide a platform for knowledge
-            sharing and positive conversations.
+            that highlights learning, personal development, community impact,
+            and individual achievements. Through digital storytelling,
+            interviews, features, and multimedia content, we provide a platform
+            for knowledge sharing and positive conversations.
           </p>
-          <p className="text-gray-600 leading-relaxed text-base sm:text-lg mt-4">
+          <p className="text-gray-400 leading-relaxed text-base sm:text-lg mt-4">
             At Kings Mind Media, we believe media is a powerful tool for
             education, awareness, and transformation — committed to producing
             content that informs, inspires, and empowers people to grow and make
@@ -107,12 +119,16 @@ const Media = () => {
 
         {/* ── Offerings grid ── */}
         <div className="px-5 sm:px-8 lg:px-16 pb-12 max-w-4xl mx-auto">
-          <h2 className="font-bold text-xl text-gray-800 mb-4">What we offer</h2>
+          <h2 className="font-bold text-xl text-gray-500 mb-4">
+            What we offer
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {offerings.map((o, i) => (
-              <div key={i}
-                   className="flex gap-4 items-start p-4 rounded-2xl border border-gray-100
-                              bg-gradient-to-br from-[#eaf4fb] to-[#ece9f9] shadow-sm">
+              <div
+                key={i}
+                className="flex gap-4 items-start p-4 rounded-2xl border border-gray-100
+                              bg-gradient-to-br from-[#eaf4fb] to-[#ece9f9] shadow-sm"
+              >
                 <span className="mt-0.5 text-2xl text-[#006ca7] shrink-0">
                   <i className={`fa-solid ${o.icon}`} aria-hidden="true" />
                 </span>
@@ -124,7 +140,6 @@ const Media = () => {
             ))}
           </div>
         </div>
-
       </div>
     </>
   );

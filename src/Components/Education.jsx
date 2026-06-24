@@ -33,31 +33,43 @@ const offerings = [
 
 const pillars = [
   { icon: "fa-graduation-cap", text: "Academic Planning" },
-  { icon: "fa-compass", label: "Career Development" , text: "Career Development" },
+  {
+    icon: "fa-compass",
+    label: "Career Development",
+    text: "Career Development",
+  },
   { icon: "fa-building-columns", text: "College Admissions" },
   { icon: "fa-people-arrows", text: "Curriculum Support" },
 ];
 
 const Education = () => {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
-      <Helmet><title>KingsMind Education</title></Helmet>
+      <Helmet>
+        <title>KingsMind Education</title>
+      </Helmet>
 
-      <div className="min-h-screen bg-white">
-
+      <div className="min-h-screen">
         {/* ── Back button ── */}
         <div className="px-4 pt-4">
-          <Link to="/" className="inline-flex items-center gap-1 text-[#006ca7] font-semibold hover:opacity-75 transition-opacity">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1 text-[#006ca7] font-semibold hover:opacity-75 transition-opacity"
+          >
             <ChevronLeft size="1.25rem" />
             <span>Back</span>
           </Link>
         </div>
 
         {/* ── Hero banner ── */}
-        <div className="relative mt-3 w-full overflow-hidden"
-             style={{ minHeight: "clamp(160px, 30svh, 320px)" }}>
+        <div
+          className="relative mt-3 w-full overflow-hidden"
+          style={{ minHeight: "clamp(160px, 30svh, 320px)" }}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-[#006ca7] via-[#1a3e8f] to-[#2a166f]" />
 
           {/* decorative book-page shapes */}
@@ -83,10 +95,15 @@ const Education = () => {
         <div className="px-5 sm:px-8 lg:px-16 pt-6 pb-2 max-w-4xl mx-auto">
           <div className="flex flex-wrap gap-2">
             {pillars.map((p, i) => (
-              <span key={i}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
-                               bg-gradient-to-r from-[#eaf4fb] to-[#ece9f9] text-[#1a3e8f]">
-                <i className={`fa-solid ${p.icon} text-[#006ca7]`} aria-hidden="true" />
+              <span
+                key={i}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
+                               bg-gradient-to-r from-[#eaf4fb] to-[#ece9f9] text-[#1a3e8f]"
+              >
+                <i
+                  className={`fa-solid ${p.icon} text-[#006ca7]`}
+                  aria-hidden="true"
+                />
                 {p.text}
               </span>
             ))}
@@ -96,14 +113,14 @@ const Education = () => {
         {/* ── About text ── */}
         <div className="px-5 sm:px-8 lg:px-16 py-6 max-w-4xl mx-auto">
           <div className="h-1 w-20 rounded-full bg-gradient-to-r from-[#006ca7] to-[#2a166f] mb-5" />
-          <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+          <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
             We provide guidance and support to students, parents, and schools on
             academic planning, college admissions, career development, and
             curriculum improvement. Working alongside educational institutions,
             we help navigate complex educational structures and career
             opportunities.
           </p>
-          <p className="text-gray-600 leading-relaxed text-base sm:text-lg mt-4">
+          <p className="text-gray-400 leading-relaxed text-base sm:text-lg mt-4">
             From reviewing new educational tools to working closely with parents
             on college preparation — our clients receive personalised advice
             across a wide range of educational needs.
@@ -112,12 +129,16 @@ const Education = () => {
 
         {/* ── Offerings grid ── */}
         <div className="px-5 sm:px-8 lg:px-16 pb-12 max-w-4xl mx-auto">
-          <h2 className="font-bold text-xl text-gray-800 mb-4">What we offer</h2>
+          <h2 className="font-bold text-xl text-gray-500 mb-4">
+            What we offer
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {offerings.map((o, i) => (
-              <div key={i}
-                   className="flex gap-4 items-start p-4 rounded-2xl border border-gray-100
-                              bg-gradient-to-br from-[#eaf4fb] to-[#ece9f9] shadow-sm">
+              <div
+                key={i}
+                className="flex gap-4 items-start p-4 rounded-2xl border border-gray-100
+                              bg-gradient-to-br from-[#eaf4fb] to-[#ece9f9] shadow-sm"
+              >
                 <span className="mt-0.5 text-2xl text-[#006ca7] shrink-0">
                   <i className={`fa-solid ${o.icon}`} aria-hidden="true" />
                 </span>
@@ -129,7 +150,6 @@ const Education = () => {
             ))}
           </div>
         </div>
-
       </div>
     </>
   );
